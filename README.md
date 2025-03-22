@@ -1,0 +1,2 @@
+# minggu6
+Bismillah
