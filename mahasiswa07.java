@@ -4,17 +4,17 @@ public class mahasiswa07 {
     String kelas;
     double ipk;
 
-    mahasiswa07(){
+    public mahasiswa07(){
     }
 
-    mahasiswa07(String nm, String name, String kls, double ip){
+    public mahasiswa07(String nm, String name, String kls, double ip){
         nim = nm;
         nama = name;
         kelas = kls;
         ipk = ip;
     }
 
-    void tampilInformasi(){
+    public void tampilInformasi(){
         System.out.println("Nama : " + nama);
         System.out.println("NIM : " + nim);
         System.out.println("Kelas : " + kelas );
