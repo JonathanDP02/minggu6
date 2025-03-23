@@ -1,8 +1,13 @@
 public class mahasiswaBerprestasi07 {
-    mahasiswa07[] listMhs = new mahasiswa07[5];
+    mahasiswa07[] listMhs;
     int idx;
 
     public mahasiswaBerprestasi07(){
+    }
+
+    public mahasiswaBerprestasi07(int jumlah){
+        listMhs = new mahasiswa07[jumlah];
+        idx =0;
     }
 
     public void tambah(mahasiswa07 m){
@@ -48,7 +53,7 @@ public class mahasiswaBerprestasi07 {
         for(int i=1; i<listMhs.length; i++){
             mahasiswa07 temp = listMhs[i];
             int j=i;
-            while (j>0 && listMhs[j-1].ipk>temp.ipk) {
+            while (j>0 && listMhs[j-1].ipk<temp.ipk) {
                 listMhs[j]=listMhs[j-1];
                 j--;
             }
