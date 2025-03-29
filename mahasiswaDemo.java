@@ -37,19 +37,42 @@ public class mahasiswaDemo {
         // list.tambah(m4);
         // list.tambah(m5);
 
-        System.out.println("Data mahasiswa sebelum sorting: ");
         list.tampil();
 
-        System.out.println("Data mahasiswa setelah sorting berdasarkan IPK (DESC) : ");
-        list.bubbleSort();
-        list.tampil();
+        System.out.println("-------------------------------------");
+        System.out.println("Pencarian data");
+        System.out.println("-------------------------------------");
+        System.out.println("Masukkan ipk mahasiswa yang dicari: ");
+        System.out.print("IPK: ");
+        double cari = sc.nextDouble();
 
-        System.out.println("Data yang sudah terurut menggunakan SELECTION SORT (ASC)");
-        list.selectionSort();
-        list.tampil();
+        // System.out.println("Menggunakan sequential searching");
+        // double posisi = list.sequentialSearching(cari);
+        // int pss = (int)posisi;
+        // list.tampilPosisi(cari, pss);
+        // list.tampilDataSearch(cari, pss);
 
-        System.out.println("Data yang sudah terurut menggunakan INSERTION SORT (ASC)");
-        list.insertionSort();
-        list.tampil();
+        System.out.println("------------------------------------");
+        System.out.println("Menggunakan binary search");
+        System.out.println("------------------------------------");
+        double posisi2 = list.findBinarySearch(cari, 0, jumMhs-1);
+        int pss2 = (int) posisi2;
+        list.tampilPosisi(cari, pss2);
+        list.tampilDataSearch(cari, pss2);
+
+        // System.out.println("Data mahasiswa sebelum sorting: ");
+        // list.tampil();
+
+        // System.out.println("Data mahasiswa setelah sorting berdasarkan IPK (DESC) : ");
+        // list.bubbleSort();
+        // list.tampil();
+
+        // System.out.println("Data yang sudah terurut menggunakan SELECTION SORT (ASC)");
+        // list.selectionSort();
+        // list.tampil();
+
+        // System.out.println("Data yang sudah terurut menggunakan INSERTION SORT (ASC)");
+        // list.insertionSort();
+        // list.tampil();
     }
 }
